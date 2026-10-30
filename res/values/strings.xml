@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RayBan Fix</string>
+    <string name="share_label">Agregar etiqueta Ray-Ban Meta</string>
+    <string name="share_title">Compartir video con etiqueta</string>
+    <string name="working">Agregando etiqueta Ray-Ban Meta…</string>
+    <string name="error_title">No se pudo procesar el video</string>
+
+    <string name="main_subtitle">Agrega la etiqueta Ray-Ban Meta a los videos de tus lentes para que WhatsApp la muestre en tus estados.</string>
+    <string name="section_fix_title">Arreglar un video de los lentes</string>
+    <string name="section_fix_body">Elige un video grabado con tus Ray-Ban Meta, o desde la galería usa Compartir → «Agregar etiqueta Ray-Ban Meta». Queda un acceso directo al original en la lista para volver a compartirlo en un toque. Solo funciona con videos que traen los metadatos originales de los lentes.</string>
+    <string name="pick_video">Elegir video</string>
+    <string name="section_fixed_title">Videos arreglados</string>
+    <string name="empty_fixed">Todavía no hay videos guardados</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_play">Reproducir</string>
+    <string name="no_player">No hay una app para reproducir el video.</string>
+
+    <string name="section_other_title">Videos que pasaron por otras apps</string>
+    <string name="section_other_body">¿Grabaste un video con tus lentes pero lo que tienes es la copia de WhatsApp, Instagram, Telegram u otra app? Esas apps le borran los metadatos de los lentes. Elígelo aquí, confirma el modelo de tus lentes y se los volvemos a agregar.</string>
+    <string name="pick_other_video">Agregar video de otra app</string>
+    <string name="checking">Revisando el video…</string>
+    <string name="already_tagged">Este video ya tenía la etiqueta; se comparte tal cual.</string>
+    <string name="model_title">¿Con qué lentes lo grabaste?</string>
+    <string name="model_missing">Este video ya no trae los metadatos de los lentes; pasa cuando se envía o se guarda desde otra app. Úsalo solo con videos que de verdad grabaste con tus lentes.</string>
+    <string name="model_detected">Este video todavía trae los metadatos de tus lentes (%1$s).</string>
+    <string name="model_other">Otro modelo…</string>
+    <string name="model_hint">Nombre exacto del modelo</string>
+    <string name="add_tag">Agregar etiqueta</string>
+
+    <string name="options_title">Opciones</string>
+    <string name="option_access_title">Acceso a tus videos</string>
+    <string name="option_access_full">Permitido: la app puede abrir los videos originales de tus accesos directos.</string>
+    <string name="option_access_partial">Limitado: solo se guardan accesos directos de los videos que elegiste. Toca para cambiarlo.</string>
+    <string name="option_access_none">No permitido: los videos que compartes desde la galería no se agregan a la lista. Toca para permitirlo.</string>
+    <string name="option_save_title">Guardar también una copia</string>
+    <string name="option_save_on">Activado: además del acceso directo, se guarda una copia completa del video en Movies/RayBanFix (ocupa lo mismo que el original) y aparece en la lista como «Copia del video».</string>
+    <string name="option_save_off">Desactivado: no se guarda ninguna copia. Al compartir se genera una copia temporal que se borra sola.</string>
+    <string name="option_save_note">Los videos de los lentes siempre quedan en la lista como acceso directo. Los de «Agregar video de otra app» solo quedan en la lista si esta opción está activada, como copia.</string>
+    <string name="empty_body">Los videos de los lentes que arregles aparecerán aquí como acceso directo, para volver a compartirlos en un toque.</string>
+
+    <string name="access_banner_none">Permite el acceso a tus videos para que los que compartas desde la galería queden en la lista como acceso directo.</string>
+    <string name="access_allow">Permitir</string>
+    <string name="access_state_full">Permitido</string>
+    <string name="access_state_partial">Limitado</string>
+    <string name="access_state_none">No permitido</string>
+    <string name="convert_action">Convertir</string>
+    <string name="convert_confirm_title">¿Convertir en accesos directos?</string>
+    <string name="converted_toast">Listo: se liberaron %s.</string>
+    <string name="copy_label">Copia del video</string>
+    <string name="origin_missing">Original no disponible</string>
+    <string name="action_remove">Quitar de la lista</string>
+    <string name="remove_message">Se quitarán de la lista. Tus videos originales no se borran.</string>
+    <string name="mixed_message">Los accesos directos se quitarán de la lista (tus originales no se borran) y las copias se borrarán del teléfono.</string>
+    <string name="shortcut_not_saved">El video se compartió, pero no se agregó a la lista porque la app no tiene acceso al original.</string>
+    <string name="source_unavailable">El video original ya no está disponible. Puedes quitarlo de la lista.</string>
+
+    <string name="today">Hoy</string>
+    <string name="yesterday">Ayer</string>
+    <string name="origin_glasses">Grabado con los lentes</string>
+    <string name="origin_tag_only">No tenía metadatos de los lentes</string>
+    <string name="origin_untagged">Sin etiqueta</string>
+    <string name="origin_checking">Revisando…</string>
+
+    <string name="action_delete">Eliminar</string>
+    <string name="select_all">Seleccionar todo</string>
+    <string name="close_selection">Cerrar selección</string>
+    <string name="delete_message">Se borrarán del teléfono. Esta acción no se puede deshacer.</string>
+    <string name="delete_failed">No se pudieron eliminar algunos videos.</string>
+
+    <plurals name="video_count">
+        <item quantity="one">%d video</item>
+        <item quantity="many">%d videos</item>
+        <item quantity="other">%d videos</item>
+    </plurals>
+    <plurals name="selected_count">
+        <item quantity="one">%d seleccionado</item>
+        <item quantity="many">%d seleccionados</item>
+        <item quantity="other">%d seleccionados</item>
+    </plurals>
+    <plurals name="delete_title">
+        <item quantity="one">¿Eliminar %d video?</item>
+        <item quantity="many">¿Eliminar %d videos?</item>
+        <item quantity="other">¿Eliminar %d videos?</item>
+    </plurals>
+    <plurals name="deleted_toast">
+        <item quantity="one">Se eliminó %d copia</item>
+        <item quantity="many">Se eliminaron %d copias</item>
+        <item quantity="other">Se eliminaron %d copias</item>
+    </plurals>
+    <plurals name="remove_title">
+        <item quantity="one">¿Quitar %d video de la lista?</item>
+        <item quantity="many">¿Quitar %d videos de la lista?</item>
+        <item quantity="other">¿Quitar %d videos de la lista?</item>
+    </plurals>
+    <plurals name="removed_toast">
+        <item quantity="one">Se quitó %d acceso directo</item>
+        <item quantity="many">Se quitaron %d accesos directos</item>
+        <item quantity="other">Se quitaron %d accesos directos</item>
+    </plurals>
+    <plurals name="convert_banner">
+        <item quantity="one">Puedo convertir %1$d copia de un video de los lentes en acceso directo y liberar %2$s.</item>
+        <item quantity="many">Puedo convertir %1$d copias de videos de los lentes en accesos directos y liberar %2$s.</item>
+        <item quantity="other">Puedo convertir %1$d copias de videos de los lentes en accesos directos y liberar %2$s.</item>
+    </plurals>
+    <plurals name="convert_confirm_message">
+        <item quantity="one">Se borrará %1$d copia (%2$s) y quedará un acceso directo a tu video original, que no se toca.</item>
+        <item quantity="many">Se borrarán %1$d copias (%2$s) y quedarán accesos directos a tus videos originales, que no se tocan.</item>
+        <item quantity="other">Se borrarán %1$d copias (%2$s) y quedarán accesos directos a tus videos originales, que no se tocan.</item>
+    </plurals>
+</resources>

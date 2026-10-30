@@ -1,0 +1,9 @@
+# Compilación (build.ps1 la regenera)
+build/
+
+# Claves de firma: nunca en el repositorio
+*.keystore
+*.jks
+
+# Configuración local
+.localConfig/

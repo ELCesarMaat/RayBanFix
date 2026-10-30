@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+    <item>
+        <selector>
+            <item android:state_activated="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/rb_selected" />
+                    <stroke android:width="2dp" android:color="@color/rb_primary" />
+                    <corners android:radius="20dp" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/rb_surface" />
+                    <corners android:radius="20dp" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

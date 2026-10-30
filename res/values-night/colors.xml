@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rb_background">#121318</color>
+    <color name="rb_surface">#1E1F26</color>
+    <color name="rb_surface_high">#292A31</color>
+    <color name="rb_on_surface">#E4E1E9</color>
+    <color name="rb_on_surface_variant">#C6C5D0</color>
+    <color name="rb_outline">#46464F</color>
+    <color name="rb_primary">#B8C3FF</color>
+    <color name="rb_on_primary">#172778</color>
+    <color name="rb_primary_container">#313F90</color>
+    <color name="rb_on_primary_container">#DDE1FF</color>
+    <color name="rb_selected">#313F90</color>
+    <color name="rb_ok_container">#1B4D2A</color>
+    <color name="rb_on_ok_container">#A8EDB8</color>
+    <color name="rb_warn_container">#573700</color>
+    <color name="rb_on_warn_container">#FFDDB0</color>
+</resources>
