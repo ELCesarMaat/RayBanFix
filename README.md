@@ -116,6 +116,7 @@ El script es la versión mínima del arreglo: no pregunta de dónde viene el vid
 
 ## Limitaciones
 
+- Probado con la app Meta AI instalada y vinculada a unos lentes. Sin ella no está probado: en las fotos, WhatsApp consulta a esa app el estado de conexión de los lentes, y podría hacer lo mismo con los videos.
 - MP4 fragmentado o de más de 4 GB: no soportado.
 - Video de los lentes editado por otra app con el `moov` al final: no soportado en «Elegir video»; usa «Agregar video de otra app».
 - Depende de cómo lee WhatsApp los metadatos; si cambia ese lector, el arreglo puede dejar de hacer falta o de funcionar.
