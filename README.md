@@ -1,6 +1,8 @@
 # RayBan Fix
 
-Hace que los **videos** grabados con los lentes Ray-Ban Meta muestren la insignia «Ray-Ban Meta» al publicarlos en un estado de WhatsApp, igual que ya pasa con las fotos.
+Pon la insignia «Ray-Ban Meta» en los **videos** que publicas en tus estados de WhatsApp, igual que ya pasa con las fotos de los lentes.
+
+La app no revisa de dónde salió el video: solo te pregunta con qué lentes lo grabaste. Y tú siempre dices la verdad, ¿no? 😉
 
 Incluye dos formas de hacerlo:
 
@@ -45,10 +47,10 @@ Para videos que ya pasaron por WhatsApp, Instagram, Telegram u otra app (que bor
 **Desde la app:**
 
 - **Elegir video**: arregla un video grabado con los lentes. Queda en la lista como acceso directo al original, para volver a compartirlo en un toque.
-- **Agregar video de otra app**: para la copia de un video de los lentes que ya pasó por otra app. Confirma el modelo (por defecto `Ray-Ban Meta Smart Glasses 2`) y se le vuelven a poner los metadatos.
+- **Agregar video de otra app**: para videos que ya no traen los metadatos de los lentes (los que pasaron por WhatsApp, Instagram, Telegram… o los que, digamos, *recuerdas* haber grabado con ellos). Eliges el modelo (por defecto `Ray-Ban Meta Smart Glasses 2`) y se los pone. La app te pedirá que lo uses solo con videos de tus lentes; es un sistema basado en la confianza.
 - **Opciones → Guardar también una copia**: además del acceso directo, guarda el video arreglado en `Movies/RayBanFix`.
 
-Solo funciona con videos que de verdad grabaste con los lentes: si el video no trae `device=…`, la app lo dice y no lo toca (salvo en «Agregar video de otra app», donde el modelo lo confirmas tú).
+«Elegir video» solo acepta videos que todavía traen `device=…` de los lentes. Para todo lo demás está «Agregar video de otra app», donde el modelo lo pones tú.
 
 ### Compilarla
 
@@ -89,7 +91,7 @@ Con otro modelo de lentes, pásalo como tercer argumento:
 python python/raybanmeta_whatsapp_video_fix.py entrada.mp4 salida.mp4 "Ray-Ban Meta Smart Glasses"
 ```
 
-El script es la versión mínima del arreglo: solo funciona con el video original de los lentes (necesita la caja `free` después de `moov`) y comprueba al final que `mdat` no se movió. Para copias que pasaron por otras apps, usa la app.
+El script es la versión mínima del arreglo: no pregunta de dónde viene el video, pero necesita que tenga una caja `free` justo después de `moov` (los videos de los lentes la traen; muchos otros no) y comprueba al final que `mdat` no se movió. Si el script se queja de que falta esa caja, usa la app, que sí reacomoda el archivo.
 
 ## Privacidad y permisos
 
@@ -106,7 +108,9 @@ El script es la versión mínima del arreglo: solo funciona con el video origina
 
 **¿La insignia la ven todos?** Sí. Al publicar el video arreglado, la atribución viaja con el estado y la ven también los contactos que lo abren desde otro teléfono.
 
-**Compartí el video y no salió la insignia.** Comprueba que el video sea de los lentes: si ya pasó por otra app, usa «Agregar video de otra app» y confirma el modelo. Si se publicó el archivo original en vez del arreglado, comparte de nuevo desde la lista de la app.
+**¿Tiene que ser un video de los lentes?** La insignia la decide WhatsApp leyendo los metadatos del archivo, no mirando el video. Saca tus propias conclusiones.
+
+**Compartí el video y no salió la insignia.** Si «Elegir video» lo rechazó o ya pasó por otra app, usa «Agregar video de otra app» y elige el modelo. Si se publicó el archivo original en vez del arreglado, comparte de nuevo desde la lista de la app.
 
 **¿Qué pasa si WhatsApp corrige su lector?** El video arreglado sigue siendo un MP4 válido; la caja extra simplemente deja de hacer falta.
 
