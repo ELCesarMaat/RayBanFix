@@ -23,10 +23,7 @@ Los videos actuales de los lentes no traen esa caja `udta`. Guardan los mismos d
 
 Se agrega al `moov` una caja `udta` con el comentario `©cmt` que WhatsApp espera. El espacio sale de la caja `free` que los lentes dejan justo después de `moov`, así que **no se mueve ni un byte de `mdat`** ni hay que tocar las tablas de offsets: el archivo queda del mismo tamaño y el video es idéntico.
 
-```
-antes:   ftyp | moov            | free (relleno) | mdat
-después: ftyp | moov + udta     | free (menor)   | mdat   ← mismo offset
-```
+![Cajas del MP4 antes y después del arreglo](docs/mp4-antes-despues.svg)
 
 Para videos que ya pasaron por WhatsApp, Instagram, Telegram u otra app (que borran los metadatos de los lentes y casi nunca dejan una caja `free`), la app reescribe el `moov`, mueve lo que va detrás y actualiza los offsets de cada pista (`stco`/`co64`). En ese caso el modelo de los lentes lo eliges tú.
 
@@ -93,6 +90,25 @@ python python/raybanmeta_whatsapp_video_fix.py entrada.mp4 salida.mp4 "Ray-Ban M
 ```
 
 El script es la versión mínima del arreglo: solo funciona con el video original de los lentes (necesita la caja `free` después de `moov`) y comprueba al final que `mdat` no se movió. Para copias que pasaron por otras apps, usa la app.
+
+## Privacidad y permisos
+
+- La app **no usa internet**: no tiene el permiso `INTERNET` y todo el arreglo ocurre en el teléfono.
+- Pide acceso a tus videos (`READ_MEDIA_VIDEO`, o acceso limitado a los que elijas) solo para guardar accesos directos al original y volver a compartirlo. Sin ese permiso funciona igual, pero los videos compartidos desde la galería no quedan en la lista.
+- No modifica tus videos originales: comparte una copia arreglada (temporal, o guardada en `Movies/RayBanFix` si activas esa opción).
+- Solo cambia metadatos: el video no se recodifica ni pierde calidad.
+
+## Preguntas frecuentes
+
+**¿Necesita root?** No. Es una app normal de Android 10 o superior.
+
+**¿Sirve para fotos?** No hace falta: las fotos de los lentes ya muestran la insignia, porque WhatsApp las lee del EXIF.
+
+**¿La insignia la ven todos?** Sí. Al publicar el video arreglado, la atribución viaja con el estado y la ven también los contactos que lo abren desde otro teléfono.
+
+**Compartí el video y no salió la insignia.** Comprueba que el video sea de los lentes: si ya pasó por otra app, usa «Agregar video de otra app» y confirma el modelo. Si se publicó el archivo original en vez del arreglado, comparte de nuevo desde la lista de la app.
+
+**¿Qué pasa si WhatsApp corrige su lector?** El video arreglado sigue siendo un MP4 válido; la caja extra simplemente deja de hacer falta.
 
 ## Limitaciones
 

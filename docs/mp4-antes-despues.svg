@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Cajas del MP4 antes y después de RayBan Fix</title>
+  <style>
+    .card { fill: #ffffff; stroke: #d0d7de; }
+    .box { fill: #f6f8fa; stroke: #8c959f; }
+    .mdat { fill: #eaeef2; stroke: #8c959f; }
+    .new { fill: #ddf4ff; stroke: #0969da; }
+    .t { fill: #1f2328; font-size: 13px; }
+    .s { fill: #59636e; font-size: 12px; }
+    .k { fill: #1f2328; font-size: 13px; font-weight: 600; }
+    .m { fill: #1f2328; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .acc { fill: #0969da; }
+    .guide { stroke: #0969da; stroke-dasharray: 4 4; }
+  </style>
+  <rect class="card" x="0.5" y="0.5" width="759" height="329" rx="8"/>
+
+  <text class="k" x="20" y="34">Original de los lentes</text>
+  <rect class="box" x="190" y="18" width="60" height="40" rx="3"/><text class="t" x="220" y="43" text-anchor="middle">ftyp</text>
+  <rect class="box" x="250" y="18" width="200" height="40" rx="3"/><text class="t" x="350" y="43" text-anchor="middle">moov</text>
+  <rect class="box" x="450" y="18" width="110" height="40" rx="3"/><text class="t" x="505" y="43" text-anchor="middle">free (relleno)</text>
+  <rect class="mdat" x="560" y="18" width="180" height="40" rx="3"/><text class="t" x="650" y="43" text-anchor="middle">mdat (video y audio)</text>
+
+  <text class="k" x="20" y="124">Después de RayBan Fix</text>
+  <rect class="box" x="190" y="108" width="60" height="40" rx="3"/><text class="t" x="220" y="133" text-anchor="middle">ftyp</text>
+  <rect class="box" x="250" y="108" width="200" height="40" rx="3"/><text class="t" x="350" y="133" text-anchor="middle">moov</text>
+  <rect class="new" x="450" y="108" width="60" height="40" rx="3"/><text class="t acc" x="480" y="133" text-anchor="middle">udta</text>
+  <rect class="box" x="510" y="108" width="50" height="40" rx="3"/><text class="t" x="535" y="133" text-anchor="middle">free</text>
+  <rect class="mdat" x="560" y="108" width="180" height="40" rx="3"/><text class="t" x="650" y="133" text-anchor="middle">mdat (video y audio)</text>
+
+  <line class="guide" x1="560" y1="62" x2="560" y2="104"/>
+  <text class="s" x="552" y="88" text-anchor="end">mdat queda en el mismo offset: no se mueve ningún byte</text>
+  <path d="M 250 152 L 250 160 L 510 160 L 510 152" fill="none" stroke="#0969da"/>
+  <text class="s" x="380" y="176" text-anchor="middle">moov crece lo mismo que se le quita a free (132 bytes)</text>
+
+  <text class="k" x="20" y="214">Lo que se agrega dentro de moov</text>
+  <text class="m" x="20" y="240">udta</text>
+  <text class="m" x="40" y="260">└─ meta  (hdlr: mdir / appl)</text>
+  <text class="m" x="72" y="280">└─ ilst</text>
+  <text class="m" x="104" y="300">└─ ©cmt → data: "app=Meta AI&amp;device=Ray-Ban Meta Smart Glasses 2"</text>
+  <text class="s" x="740" y="240" text-anchor="end">Es el camino exacto que lee WhatsApp</text>
+  <text class="s" x="740" y="258" text-anchor="end">para mostrar la insignia en videos.</text>
+</svg>
