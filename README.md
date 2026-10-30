@@ -34,7 +34,7 @@ Para videos que ya pasaron por WhatsApp, Instagram, Telegram u otra app (que bor
 ### Instalarla
 
 1. Descarga `RayBanFix-x.y.apk` de la página de [Releases](../../releases).
-2. Ábrelo en el teléfono y permite instalar apps de esa fuente. Requiere Android 10 o superior.
+2. Ábrelo en el teléfono y permite instalar apps de esa fuente. Requiere Android 10 o superior y, para que WhatsApp muestre la insignia, la app Meta AI vinculada a tus lentes (ver [Limitaciones](#limitaciones)).
 
 ### Usarla
 
@@ -47,7 +47,7 @@ Para videos que ya pasaron por WhatsApp, Instagram, Telegram u otra app (que bor
 **Desde la app:**
 
 - **Elegir video**: arregla un video grabado con los lentes. Queda en la lista como acceso directo al original, para volver a compartirlo en un toque.
-- **Agregar video de otra app**: para videos que ya no traen los metadatos de los lentes (los que pasaron por WhatsApp, Instagram, Telegram… o los que, digamos, *recuerdas* haber grabado con ellos). Eliges el modelo (por defecto `Ray-Ban Meta Smart Glasses 2`) y se los pone. La app te pedirá que lo uses solo con videos de tus lentes; es un sistema basado en la confianza.
+- **Agregar video de otra app**: para videos que ya no traen los metadatos de los lentes (los que pasaron por WhatsApp, Instagram, Telegram… o los que, digamos, *recuerdas* haber grabado con ellos). Eliges el modelo (viene marcado el último que usaste; la primera vez, `Ray-Ban Meta Smart Glasses 2`, o «Otro modelo…» para escribirlo) y se los pone. La app te pedirá que lo uses solo con videos de tus lentes; es un sistema basado en la confianza.
 - **Opciones → Guardar también una copia**: además del acceso directo, guarda el video arreglado en `Movies/RayBanFix`.
 
 «Elegir video» solo acepta videos que todavía traen `device=…` de los lentes. Para todo lo demás está «Agregar video de otra app», donde el modelo lo pones tú.
@@ -116,7 +116,7 @@ El script es la versión mínima del arreglo: no pregunta de dónde viene el vid
 
 ## Limitaciones
 
-- Probado con la app Meta AI instalada y vinculada a unos lentes. Sin ella no está probado: en las fotos, WhatsApp consulta a esa app el estado de conexión de los lentes, y podría hacer lo mismo con los videos.
+- Al publicar el video arreglado, WhatsApp consulta a la app Meta AI el estado de conexión de los lentes (`com.facebook.stella.assistant.deviceconnectionstate`), igual que con las fotos. Todo se probó con Meta AI instalada y vinculada a unos lentes; sin ella no se sabe si la insignia aparece.
 - MP4 fragmentado o de más de 4 GB: no soportado.
 - Video de los lentes editado por otra app con el `moov` al final: no soportado en «Elegir video»; usa «Agregar video de otra app».
 - Depende de cómo lee WhatsApp los metadatos; si cambia ese lector, el arreglo puede dejar de hacer falta o de funcionar.
