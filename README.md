@@ -34,7 +34,7 @@ Para videos que ya pasaron por WhatsApp, Instagram, Telegram u otra app (que bor
 ### Instalarla
 
 1. Descarga `RayBanFix-x.y.apk` de la página de [Releases](../../releases).
-2. Ábrelo en el teléfono y permite instalar apps de esa fuente. Requiere Android 10 o superior y, para que WhatsApp muestre la insignia, la app Meta AI instalada y vinculada a tus lentes (ver [Limitaciones](#limitaciones)).
+2. Ábrelo en el teléfono y permite instalar apps de esa fuente. Requiere Android 10 o superior y, para que WhatsApp muestre la insignia, la app Meta AI instalada y vinculada a unos lentes; no hace falta que estén encendidos (ver [Limitaciones](#limitaciones)).
 
 ### Usarla
 
@@ -116,7 +116,10 @@ El script es la versión mínima del arreglo: no pregunta de dónde viene el vid
 
 ## Limitaciones
 
-- **Hace falta la app Meta AI instalada.** Al publicar, WhatsApp lee la etiqueta del video y además consulta a Meta AI el estado de los lentes (`com.facebook.stella.assistant.deviceconnectionstate`), igual que con las fotos. Probado en WhatsApp 2.26.39.79: con Meta AI oculta, WhatsApp reconoció el video como de los lentes, pero la insignia no salió. No se ha probado con Meta AI instalada y sin lentes vinculados.
+- **Hace falta la app Meta AI instalada, con unos lentes vinculados.** Al publicar, WhatsApp lee la etiqueta del video y además consulta a Meta AI (`com.facebook.stella.assistant.deviceconnectionstate`), igual que con las fotos. Probado en WhatsApp 2.26.39.79:
+  - Meta AI oculta: WhatsApp reconoce el video como de los lentes, pero **no** muestra la insignia.
+  - Meta AI instalada y lentes vinculados pero **desconectados** (apagados): la insignia **sí** sale. No hace falta tenerlos encendidos al publicar.
+  - Sin probar: Meta AI instalada sin ningunos lentes vinculados.
 - MP4 fragmentado o de más de 4 GB: no soportado.
 - Video de los lentes editado por otra app con el `moov` al final: no soportado en «Elegir video»; usa «Agregar video de otra app».
 - Depende de cómo lee WhatsApp los metadatos; si cambia ese lector, el arreglo puede dejar de hacer falta o de funcionar.
